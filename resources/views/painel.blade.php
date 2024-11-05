@@ -1060,17 +1060,6 @@
 
         </div>
 
-        <!-- <div id="container-form">
-            <form id="formulario">
-                <p>Excluir Produto</p>
-                <div class="linha">
-                    <label for="idProduto">ID do Produto</label>
-                    <input type="number" id="idProduto" style="width: 50px;" value="1" />
-                </div>
-                <button class="btn" href="#">Enviar</button>
-            </form>
-        </div> -->
-
         <table border="1" cellpadding="10">
             <thead>
                 <tr>

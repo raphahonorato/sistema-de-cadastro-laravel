@@ -20,15 +20,15 @@ class ProductController extends Controller
 
     public function listProducts()
     {
-        $products = Product::all(); // Pega todos os produtos
-        return view('painel', compact('products')); // Passa a variável $products para a view painel
+        $products = Product::all(); 
+        return view('painel', compact('products'));
     }
 
     public function deleteProduct($id)
     {
-        $product = Product::findOrFail($id); // Busca o produto pelo ID ou lança uma exceção se não encontrado
-        $product->delete(); // Deleta o produto
+        $product = Product::findOrFail($id); 
+        $product->delete(); 
 
-        return redirect('/')->with('successDelete', 'Produto excluído com sucesso!'); // Redireciona para o painel com uma mensagem de sucesso
+        return redirect('/')->with('successDelete', 'Produto excluído com sucesso!'); 
     }
 }
