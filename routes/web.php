@@ -1,17 +1,23 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
+Route::get('/', function(){
     return view('painel');
 });
 
-Route::post('/createProduct', [ProductController::class, 'createProduct']);
 
 
-Route::get('/', [ProductController::class, 'listProducts']);
+Route::get('/products', [ProductController::class, 'listProducts'])->name('products.list'); // Lista os produtos
 
-Route::delete('/products/{id}', [ProductController::class, 'deleteProduct'])->name('products.deleteProduct');
+
+Route::match(['GET','POST'],'/products/create', [ProductController::class, 'createProduct'])->name('products.create'); // Cria um produto
+
+Route::match(['GET','POST'],'/products/{product}/edit', [ProductController::class, 'updateProduct'])->name('products.edit'); // Cria um produto
+// Route::put('/products/{id}', [ProductController::class, 'updateProduct'])->name('products.update'); // Atualiza um produto
+
+Route::delete('/products/{id}', [ProductController::class, 'deleteProduct'])->name('products.delete'); // Exclui um produto
 
 

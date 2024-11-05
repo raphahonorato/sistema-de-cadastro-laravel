@@ -9,26 +9,52 @@ class ProductController extends Controller
 {
     public function createProduct(Request $request)
     {
-        $product = Product::create([
-            'name' => $request->input('name'),
-            'description' => $request->input('description'),
-            'quantity' => $request->input('quantity')
-        ]);
+        $request->method();
 
-        return redirect()->back()->with('success', 'Produto criado com sucesso!');
+        if ($request->isMethod('post')) {
+            Product::create([
+                'name' => $request->input('name'),
+                'description' => $request->input('description'),
+                'quantity' => $request->input('quantity')
+            ]);
+
+            return redirect()->route('products.list');
+        }
+
+        return view('Products/create');
     }
 
     public function listProducts()
     {
-        $products = Product::all(); 
-        return view('painel', compact('products'));
+        $products = Product::all();
+        return view('Products/list', compact('products'));
+    }
+
+    public function updateProduct(Product $product, Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $request->validate([
+                'name' => 'required|string|max:255',
+                'description' => 'nullable|string',
+                'quantity' => 'required|integer|min:0',
+            ]);
+
+            $product->name = $request->input('name');
+            $product->description = $request->input('description');
+            $product->quantity = $request->input('quantity');
+            $product->save();
+        }
+
+        return view('Products/edit', [
+            'product' => $product
+        ]);
     }
 
     public function deleteProduct($id)
     {
-        $product = Product::findOrFail($id); 
-        $product->delete(); 
+        $product = Product::findOrFail($id);
+        $product->delete();
 
-        return redirect('/')->with('successDelete', 'Produto excluído com sucesso!'); 
+        return redirect('/products')->with('successDelete', 'Produto excluído com sucesso!');
     }
 }
