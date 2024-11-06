@@ -1,0 +1,122 @@
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 5;
+        padding: 30px;
+        line-height: 1.8;
+        align-items: center;
+        text-align: left;
+        justify-content: flex-start;
+        border: solid 1px;
+        border-color: #DE2C21;
+        border-radius: 5px;
+    }
+
+    .linha {
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn {
+        background-color: #ef3b2d;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6px 16px;
+        border: none;
+        border-radius: 4px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        text-align: center;
+        display: inline-block;
+        box-shadow: 0px 4px 12px rgba(239, 59, 45, 0.3);
+    }
+
+    .btn:hover {
+        background-color: #d62e21;
+        transform: translateY(-2px);
+    }
+
+    .btn:active {
+        background-color: #c1281d;
+        transform: translateY(0px);
+        box-shadow: 0px 3px 10px rgba(239, 59, 45, 0.2);
+    }
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #ef3b2d;
+        color: #ffffff;
+        padding: 10px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    tr:hover {
+        background-color: #232323;
+    }
+
+    img {
+        user-select: none;
+        -webkit-user-drag: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .input-style {
+        color: black;
+        padding: 10px 15px;
+        font-size: 16px;
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .input-style:focus {
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        outline: none;
+
+    }
+
+    svg:hover {
+        fill: #939393;
+    }
+
+    .ancora {
+        background-color: #6366f1;
+        font-size: 50px;
+    }

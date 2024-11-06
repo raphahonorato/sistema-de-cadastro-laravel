@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ URL::asset('css/stylePainel.css'); }}" />
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css'); }}" />
     <title>Cadastro de produtos</title>
 </head>
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-    <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+    <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50" id="container-create">
         <div id="container-form">
             <form action="{{ route('products.create') }}" method="POST" id="formulario">
                 @csrf
@@ -35,7 +35,7 @@
                 @endif
             </form>
         </div>
-        <a href="{{ route('products.list') }}">listagem produto</a>
+        <a class="ancora" id="ancora-lista" href="{{ route('products.list') }}">Lista de produtos</a>
     </div>
 </body>
 

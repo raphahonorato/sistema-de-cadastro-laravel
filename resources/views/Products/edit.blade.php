@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ URL::asset('css/stylePainel.css'); }}" />
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css'); }}" />
     <title>Cadastro de produtos</title>
 </head>
 
@@ -35,7 +35,8 @@
                 </div>
                 @endif
             </form>
-            <a href="{{ route('products.list') }}">listagem produto</a>
+            <a class="ancora" id="ancora-lista" href="{{ route('products.list') }}">Lista de produtos</a>
+            <a class="ancora" id="ancora-lista" href="{{ route('products.create') }}">Cadastrar produto</a>
         </div>
     </div>
 </body>
