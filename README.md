@@ -6,6 +6,12 @@ Neste projeto construi uma demonstração de um sistema de cadastro de produtos.
 
 Em cada linha da tabela se encontra o botão para exclusão do respectivo produto, ao excluí-lo, automaticamente a tabela é atualizada com a nova lista de produtos.
 
+O projeto encontra-se hospedado na Heroku. Pode ser acessado através dessa url.
+
+<https://rhcode.com.br>
+
+Realizei algumas configurações de deploy automático no github.
+
 ### Clone o repositório
 
 ``` bash
@@ -29,12 +35,6 @@ cp .env.example .env
 
 ``` bash
 php artisan migrate
-```
-
-### Popule o banco de dados com dados iniciais
-
-``` bash
-php artisan db:seed
 ```
 
 ### Para iniciar o servidor de desenvolvimento
