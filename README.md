@@ -2,7 +2,7 @@
 
 Neste projeto construi uma demonstração de um sistema de cadastro de produtos.
 
-Na página principal são exibidos alguns formulários para realizar as devidas chamadas a API, criar e editar um produto, e logo abaixo se encontra a tabela com todos os produtos cadastrados no banco de dados MySQL.
+É composto por alguns formulários que realizam as devidas chamadas a API, criar, exibir, editar e excluir um produto, todos os produtos cadastrados no banco de dados MySQL.
 
 Em cada linha da tabela se encontra o botão para exclusão do respectivo produto, ao excluí-lo, automaticamente a tabela é atualizada com a nova lista de produtos.
 
