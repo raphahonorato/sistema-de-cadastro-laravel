@@ -11,9 +11,10 @@
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50" id="container-create">
         <div id="container-form">
+            <h1>Cadastrar Produto</h1>
             <form action="{{ route('products.create') }}" method="POST" id="formulario">
-                @csrf
-                <p>Criar Produto</p>
+               @csrf
+
                 <div class="linha">
                     <label for="name">Nome</label>
                     <input class="input-style" type="text" id="name" name="name" required />

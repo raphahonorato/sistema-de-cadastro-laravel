@@ -11,10 +11,10 @@
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
         <div id="container-form">
-
+            <h1>Editar Produto</h1>
             <form action="{{ route('products.edit', $product->id) }}" method="POST" id="formulario">
                 @csrf
-                <p>Editar Produto</p>
+
                 <div class="linha">
                     <label for="name">Nome</label>
                     <input class="input-style" type="text" id="name" name="name" value='{{ $product->name}}' required />
@@ -35,9 +35,10 @@
                 </div>
                 @endif
             </form>
-            <a class="ancora" id="ancora-lista" href="{{ route('products.list') }}">Lista de produtos</a>
-            <a class="ancora" id="ancora-lista" href="{{ route('products.create') }}">Cadastrar produto</a>
+
         </div>
+        <a class="ancora" id="ancora-lista" href="{{ route('products.list') }}">Lista de produtos</a>
+        <a class="ancora" id="ancora-lista" href="{{ route('products.create') }}">Cadastrar produto</a>
     </div>
 </body>
 

@@ -13,9 +13,10 @@
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        <h1>CRUD Sistema de Produtos</h1>
-        <a href="{{ URL::asset('/products/create'); }}"> criar</a>
-
+        <div class="container">
+            <h1>CRUD Sistema de Produtos</h1>
+            <a class='ancora' href="{{ URL::asset('/products/create'); }}"> Cadastrar produto</a>
+        </div>
     </div>
 </body>
 
